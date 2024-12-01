@@ -35,7 +35,7 @@ def preprocess_image(image):
 # Load sample dataset for visualization
 def load_dataset_images(category, num_images):
     # Base folder for the dataset
-    base_folder = r'C:\Users\CHRISTY\Machine Learning\FP EAS\chest_xray\xray'
+    base_folder = r'pneumonia-detection/xray/'
     folder = os.path.join(base_folder, 'PNEUMONIA') if category == 'Pneumonia' else os.path.join(base_folder, 'NORMAL')
     
     # Get the list of image paths
