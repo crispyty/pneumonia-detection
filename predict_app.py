@@ -96,7 +96,7 @@ if menu == "Prediksi":
             
             # The output is a probability distribution; get the predicted class and probability
             predicted_class = 'Pneumonia' if predictions[0][0] < 0.5 else 'Normal'
-            probability = predictions[0][0] if predictions[0][0] < 0.5 else 1 - predictions[0][0]
+            probability = predictions[0][0] if predictions[0][0] > 0.5 else 1 - predictions[0][0]
             
             # Display the image and its prediction probability
             with cols[i % 3]:  # Use modulo to cycle through columns
@@ -156,24 +156,3 @@ elif menu == "Visualisasi":
             with col:
                 image = Image.open(image_path)
                 st.image(image, caption=file_name, use_column_width=True)
-
-
-    # st.header("Visualisasi X-ray")
-    
-    # # User inputs for visualization
-    # category = st.selectbox("Kategori", ["Pneumonia", "Normal"])
-    # num_images = st.text_input("Jumlah gambar yang ingin ditampilkan:", value="9")
-    
-    # try:
-    #     num_images = int(num_images)
-    #     image_paths = load_dataset_images(category, num_images)
-    #     st.subheader(f"Menampilkan {num_images} gambar kategori: {category}")
-        
-    #     # Display images in a grid layout (3 images per row)
-    #     cols = st.columns(3)
-    #     for idx, img_path in enumerate(image_paths):
-    #         with cols[idx % 3]:
-    #             image = Image.open(img_path)
-    #             st.image(image, caption=os.path.basename(img_path), use_container_width=True)  # Changed parameter
-    # except ValueError:
-    #     st.error("Masukkan angka valid untuk jumlah gambar!")
