@@ -96,7 +96,7 @@ if menu == "Prediksi":
             
             # The output is a probability distribution; get the predicted class and probability
             predicted_class = 'Pneumonia' if predictions[0][0] < 0.5 else 'Normal'
-            probability = 1 - predictions[0][0] if predictions[0][0] > 0.5 else predictions[0][0]
+            probability = predictions[0][0] if predictions[0][0] < 0.5 else predictions[0][0]
             
             # Display the image and its prediction probability
             with cols[i % 3]:  # Use modulo to cycle through columns
@@ -105,7 +105,7 @@ if menu == "Prediksi":
                 st.markdown(
                     f"""
                     <h3 style="text-align: center; font-size: 20px;">Prediction: {predicted_class}</h3>
-                    <h3 style="text-align: center; font-size: 15px;">Pneumonia Probability: {probability:.4f}</h3>
+                    <h3 style="text-align: center; font-size: 15px;">Pneumonia Probability: {1-probability:.4f}</h3>
                     """, 
                     unsafe_allow_html=True
                 )
