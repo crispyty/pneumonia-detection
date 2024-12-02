@@ -74,7 +74,7 @@ def load_dataset_images(category, num_images):
 st.title("X-ray Pneumonia Detection")
 
 # Menu as a dropdown
-menu = st.sidebar.selectbox("Menu", ["Prediksi", "Visualisasi"])
+menu = st.sidebar.selectbox("Menu", ["Prediction", "Visualization"])
 
 if menu == "Prediction":
     st.header("Pneumonia Prediction")
