@@ -95,7 +95,7 @@ if menu == "Prediksi":
             predictions = model.predict(processed_image)
             
             # The output is a probability distribution; get the predicted class and probability
-            predicted_class = 'Pneumonia' if predictions[0][0] < 0.5 else 'Normal'
+            predicted_class = 'Pneumonia' if predictions[0][0] > 0.5 else 'Normal'
             probability = predictions[0][0] if predictions[0][0] > 0.5 else 1 - predictions[0][0]
             
             # Display the image and its prediction probability
