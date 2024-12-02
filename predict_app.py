@@ -115,7 +115,7 @@ elif menu == "Visualization":
     st.title("X-ray Visualization")
 
     # Input: Google Drive folder ID
-    folder_select = st.sidebar.selectbox("Jenis X-Ray", ["Normal", "Penumonia"])
+    folder_select = st.sidebar.selectbox("Jenis X-Ray", ["Normal", "Pneumonia"])
 
     if folder_select == "Normal":
         folder_id = "1DAyMmkAiPm9zVGy0K0_BnAeQxDNbl76X"
