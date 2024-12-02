@@ -112,7 +112,7 @@ if menu == "Prediction":
 
 elif menu == "Visualization":
 
-    st.title("X-ray Visualization")
+    st.header("X-ray Visualization")
 
     # Input: Google Drive folder ID
     folder_select = st.sidebar.selectbox("Jenis X-Ray", ["Normal", "Pneumonia"])
