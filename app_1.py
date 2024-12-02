@@ -1,6 +1,5 @@
 import streamlit as st
-import tensorflow as tf
-from tensorflow.keras.models import load_model
+import tensorflow
 from PIL import Image
 import numpy as np
 import os
@@ -22,7 +21,7 @@ if not os.path.exists(model_path):
     print(f"Model downloaded to {model_path}")
 
 # Load the trained model
-model = tf.keras.models.load_model(model_path)
+model = tensorflow.keras.models.load_model(model_path)
 
 # Function to preprocess the input image
 def preprocess_image(image):
