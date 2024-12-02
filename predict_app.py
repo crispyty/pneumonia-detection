@@ -76,7 +76,7 @@ st.title("X-ray Pneumonia Detection")
 # Menu as a dropdown
 menu = st.sidebar.selectbox("Menu", ["Prediksi", "Visualisasi"])
 
-if menu == "Prediksi":
+if menu == "Prediction":
     st.header("Pneumonia Prediction")
     
     # File uploader for multiple image inputs
@@ -110,16 +110,16 @@ if menu == "Prediksi":
                     unsafe_allow_html=True
                 )
 
-elif menu == "Visualisasi":
+elif menu == "Visualization":
 
-    st.title("Google Drive Dynamic Image Viewer")
+    st.title("X-ray Visualization")
 
     # Input: Google Drive folder ID
     folder_select = st.sidebar.selectbox("Jenis X-Ray", ["Normal", "Penumonia"])
 
     if folder_select == "Normal":
         folder_id = "1DAyMmkAiPm9zVGy0K0_BnAeQxDNbl76X"
-    elif folder_select == "Penumonia":
+    elif folder_select == "Pneumonia":
         folder_id = "1ESKX8q_7uMSf65yx_Q3SyopPbwZrmZy3"
 
     # folder_id = st.text_input("Enter Google Drive Folder ID:")
