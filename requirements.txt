@@ -4,4 +4,3 @@ requests
 Pillow
 numpy
 gdown
-random
