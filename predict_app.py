@@ -104,8 +104,8 @@ if menu == "Prediction":
                 # Centered and custom font size for prediction and probability
                 st.markdown(
                     f"""
-                    <h3 style="text-align: center; font-size: 20px;">Prediction: {predicted_class}</h3>
-                    <h3 style="text-align: center; font-size: 15px;">Pneumonia Probability: {1-probability:.4f}</h3>
+                    <h3 style="text-align: left; font-size: 20px;">Prediction: {predicted_class}</h3>
+                    <h3 style="text-align: left; font-size: 15px;">Pneumonia Probability: {1-probability:.4f}</h3>
                     """, 
                     unsafe_allow_html=True
                 )
