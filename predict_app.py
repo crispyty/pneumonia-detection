@@ -34,7 +34,7 @@ def download_image(file_id, file_name):
 
 
 # Google Drive model download link
-MODEL_URL = "https://drive.google.com/uc?id=15qmsFIXmRgxMTpZ96TuidUWk_64MkN0C"
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1UNuJYcecTNWGYovZtmCijZ4K3NE_lSGj"
 
 # Function to download the model from Google Drive
 def download_model(model_url, model_path):
